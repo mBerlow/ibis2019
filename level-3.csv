@@ -1,0 +1,45 @@
+index,D_0__Bacteria;D_1__Actinobacteria;D_2__Acidimicrobiia,D_0__Bacteria;D_1__Actinobacteria;D_2__Actinobacteria,D_0__Bacteria;D_1__Actinobacteria;D_2__Coriobacteriia,D_0__Bacteria;D_1__Actinobacteria;D_2__Thermoleophilia,D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia,D_0__Bacteria;D_1__Cyanobacteria;D_2__Melainabacteria,D_0__Bacteria;D_1__Cyanobacteria;D_2__Oxyphotobacteria,D_0__Bacteria;D_1__Deinococcus-Thermus;D_2__Deinococci,D_0__Bacteria;D_1__Epsilonbacteraeota;D_2__Campylobacteria,D_0__Bacteria;D_1__Firmicutes;D_2__Bacilli,D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia,D_0__Bacteria;D_1__Firmicutes;D_2__Negativicutes,D_0__Bacteria;D_1__Fusobacteria;D_2__Fusobacteriia,D_0__Bacteria;D_1__Proteobacteria;D_2__Alphaproteobacteria,D_0__Bacteria;D_1__Proteobacteria;D_2__Deltaproteobacteria,D_0__Bacteria;D_1__Proteobacteria;D_2__Gammaproteobacteria,D_0__Bacteria;__;__,Unassigned;__;__,BarcodeSequence,LinkerPrimerSequence,NucleicAcid,Bird,location,year,Description
+T15.f,0.0,88.0,0.0,0.0,0.0,0.0,0.0,0.0,40851.0,16732.0,0.0,0.0,0.0,1605.0,0.0,24.0,62.0,24.0,NNNNNNNN,AAAAAAAAAA,DNA,T15,fecal,2016.0,gut microbiome
+T15.lg,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,345.0,693.0,0.0,0.0,0.0,5.0,0.0,0.0,3.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T15,large int,2016.0,gut microbiome
+T15.pv,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,1525.0,5163.0,0.0,0.0,0.0,432.0,0.0,94080.0,1196.0,22.0,NNNNNNNN,AAAAAAAAAA,DNA,T15,proventriculus,2016.0,gut microbiome
+T15.sm,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0,36515.0,227639.0,0.0,0.0,0.0,197.0,0.0,718.0,3702.0,302.0,NNNNNNNN,AAAAAAAAAA,DNA,T15,small int,2016.0,gut microbiome
+T32.cs,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,335393.0,209928.0,0.0,0.0,0.0,39.0,0.0,1857.0,66.0,54.0,NNNNNNNN,AAAAAAAAAA,DNA,T32,cloacal swab,2016.0,gut microbiome
+T32.f,0.0,92.0,0.0,2.0,7.0,0.0,0.0,0.0,1602800.0,256698.0,0.0,0.0,0.0,59094.0,0.0,1079.0,212.0,377.0,NNNNNNNN,AAAAAAAAAA,DNA,T32,fecal,2016.0,gut microbiome
+T32.lg,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,46718.0,239284.0,0.0,0.0,0.0,143.0,0.0,439.0,151.0,769.0,NNNNNNNN,AAAAAAAAAA,DNA,T32,large int,2016.0,gut microbiome
+T32.pv,0.0,39.0,0.0,0.0,0.0,0.0,0.0,0.0,128564.0,204674.0,0.0,0.0,0.0,31723.0,0.0,75933.0,22601.0,218.0,NNNNNNNN,AAAAAAAAAA,DNA,T32,proventriculus,2016.0,gut microbiome
+T32.sm,0.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,4548.0,488727.0,0.0,0.0,0.0,207.0,0.0,535.0,195.0,718.0,NNNNNNNN,AAAAAAAAAA,DNA,T32,small int,2016.0,gut microbiome
+T35.f,0.0,106.0,0.0,0.0,0.0,0.0,0.0,0.0,36053.0,117015.0,0.0,10.0,0.0,1009.0,0.0,493.0,67.0,19.0,NNNNNNNN,AAAAAAAAAA,DNA,T35,fecal,2016.0,gut microbiome
+T35.lg,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2060.0,559.0,0.0,0.0,0.0,4.0,0.0,38.0,5.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T35,large int,2016.0,gut microbiome
+T35.pv,0.0,396.0,0.0,0.0,0.0,0.0,0.0,0.0,3287.0,165395.0,0.0,0.0,0.0,31.0,0.0,11765.0,34968.0,199.0,NNNNNNNN,AAAAAAAAAA,DNA,T35,proventriculus,2016.0,gut microbiome
+T35.sm,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,1307.0,162895.0,0.0,0.0,0.0,91.0,0.0,312.0,3093.0,519.0,NNNNNNNN,AAAAAAAAAA,DNA,T35,small int,2016.0,gut microbiome
+T37.cs,0.0,24.0,0.0,0.0,33.0,0.0,7.0,0.0,1571.0,655.0,0.0,0.0,0.0,71.0,13.0,83.0,0.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T37,cloacal swab,2016.0,gut microbiome
+T37.f,0.0,225.0,0.0,0.0,0.0,0.0,0.0,0.0,26416.0,51400.0,0.0,0.0,0.0,107834.0,0.0,258.0,140.0,402.0,NNNNNNNN,AAAAAAAAAA,DNA,T37,fecal,2016.0,gut microbiome
+T37.lg,0.0,93.0,0.0,0.0,0.0,0.0,0.0,0.0,120470.0,166371.0,0.0,0.0,3.0,1599.0,0.0,309.0,493.0,358.0,NNNNNNNN,AAAAAAAAAA,DNA,T37,large int,2016.0,gut microbiome
+T37.pv,0.0,1270.0,0.0,0.0,316.0,0.0,0.0,0.0,7274.0,117543.0,24.0,680.0,2033.0,3862.0,0.0,61532.0,30359.0,126.0,NNNNNNNN,AAAAAAAAAA,DNA,T37,proventriculus,2016.0,gut microbiome
+T37.sm,0.0,109.0,0.0,0.0,11.0,0.0,0.0,0.0,1402.0,203945.0,0.0,0.0,0.0,3777.0,0.0,83.0,1404.0,384.0,NNNNNNNN,AAAAAAAAAA,DNA,T37,small int,2016.0,gut microbiome
+T38.f,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1231.0,58.0,0.0,0.0,13.0,534.0,0.0,95.0,0.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T38,fecal,2016.0,gut microbiome
+T38.lg,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,361173.0,64238.0,0.0,0.0,0.0,4685.0,0.0,865.0,383.0,432.0,NNNNNNNN,AAAAAAAAAA,DNA,T38,large int,2016.0,gut microbiome
+T38.pv,0.0,90.0,0.0,0.0,0.0,0.0,0.0,0.0,57145.0,71948.0,0.0,0.0,40.0,44766.0,0.0,3968.0,4910.0,109.0,NNNNNNNN,AAAAAAAAAA,DNA,T38,proventriculus,2016.0,gut microbiome
+T38.sm,0.0,103.0,0.0,0.0,0.0,0.0,0.0,0.0,236129.0,158354.0,0.0,0.0,0.0,8270.0,0.0,266.0,13497.0,239.0,NNNNNNNN,AAAAAAAAAA,DNA,T38,small int,2016.0,gut microbiome
+T39.cs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15957.0,519.0,0.0,0.0,0.0,189.0,0.0,402.0,23.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T39,cloacal swab,2016.0,gut microbiome
+T39.f,8.0,9260.0,1534.0,0.0,0.0,0.0,0.0,0.0,466523.0,29058.0,0.0,0.0,0.0,3743.0,0.0,2728.0,170.0,557.0,NNNNNNNN,AAAAAAAAAA,DNA,T39,fecal,2016.0,gut microbiome
+T39.lg,0.0,103.0,67.0,0.0,0.0,0.0,0.0,0.0,420275.0,3727.0,0.0,4.0,5.0,116.0,0.0,196.0,150.0,504.0,NNNNNNNN,AAAAAAAAAA,DNA,T39,large int,2016.0,gut microbiome
+T39.pv,0.0,7246.0,1554.0,0.0,0.0,0.0,0.0,0.0,30904.0,29067.0,0.0,0.0,0.0,0.0,0.0,1934.0,10024.0,15.0,NNNNNNNN,AAAAAAAAAA,DNA,T39,proventriculus,2016.0,gut microbiome
+T39.sm,0.0,110.0,27.0,0.0,0.0,0.0,0.0,0.0,140.0,2091.0,0.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T39,small int,2016.0,gut microbiome
+T4.cs,0.0,17.0,11.0,0.0,0.0,0.0,0.0,0.0,31146.0,1238.0,0.0,0.0,0.0,246.0,0.0,305.0,74.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T4,cloacal swab,2016.0,gut microbiome
+T4.f,0.0,2263.0,864.0,0.0,0.0,0.0,0.0,0.0,287432.0,6698.0,0.0,0.0,0.0,194.0,0.0,6922.0,39.0,484.0,NNNNNNNN,AAAAAAAAAA,DNA,T4,fecal,2016.0,gut microbiome
+T4.lg,0.0,943.0,302.0,0.0,0.0,0.0,0.0,0.0,353038.0,77848.0,0.0,0.0,0.0,282.0,0.0,6644.0,471.0,434.0,NNNNNNNN,AAAAAAAAAA,DNA,T4,large int,2016.0,gut microbiome
+T4.pv,0.0,2037.0,349.0,0.0,139.0,3.0,41.0,0.0,3641.0,12501.0,0.0,0.0,0.0,281.0,0.0,336890.0,4910.0,142.0,NNNNNNNN,AAAAAAAAAA,DNA,T4,proventriculus,2016.0,gut microbiome
+T4.sm,0.0,5568.0,3721.0,0.0,0.0,0.0,0.0,0.0,7137.0,440701.0,0.0,0.0,0.0,854.0,0.0,4589.0,3630.0,912.0,NNNNNNNN,AAAAAAAAAA,DNA,T4,small int,2016.0,gut microbiome
+T44.f,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,1313.0,838.0,0.0,0.0,0.0,29.0,0.0,196.0,47.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T44,fecal,2016.0,gut microbiome
+T44.lg,0.0,15.0,6.0,0.0,0.0,0.0,0.0,0.0,88096.0,4233.0,0.0,0.0,0.0,350.0,0.0,43.0,90.0,77.0,NNNNNNNN,AAAAAAAAAA,DNA,T44,large int,2016.0,gut microbiome
+T44.pv,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,34.0,5.0,0.0,0.0,0.0,390.0,0.0,340.0,0.0,0.0,NNNNNNNN,AAAAAAAAAA,DNA,T44,proventriculus,2016.0,gut microbiome
+T44.sm,0.0,49.0,0.0,0.0,0.0,0.0,0.0,0.0,3847.0,277506.0,0.0,9.0,0.0,1872.0,0.0,349.0,626.0,17.0,NNNNNNNN,AAAAAAAAAA,DNA,T44,small int,2016.0,gut microbiome
+T6.f,0.0,224.0,0.0,0.0,3.0,0.0,0.0,0.0,237362.0,95890.0,16.0,0.0,0.0,13172.0,0.0,1710.0,82.0,347.0,NNNNNNNN,AAAAAAAAAA,DNA,T6,fecal,2016.0,gut microbiome
+T6.lg,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3139.0,267.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,NNNNNNNN,AAAAAAAAAA,DNA,T6,large int,2016.0,gut microbiome
+T6.sm,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,517.0,16321.0,0.0,7.0,0.0,10.0,0.0,35.0,897.0,16.0,NNNNNNNN,AAAAAAAAAA,DNA,T6,small int,2016.0,gut microbiome
+T8.cs,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,451065.0,1596.0,0.0,0.0,0.0,40.0,0.0,217.0,51.0,647.0,NNNNNNNN,AAAAAAAAAA,DNA,T8,cloacal swab,2016.0,gut microbiome
+T8.f,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,495151.0,13389.0,0.0,0.0,0.0,1052.0,0.0,146.0,29.0,783.0,NNNNNNNN,AAAAAAAAAA,DNA,T8,fecal,2016.0,gut microbiome
+T8.lg,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,544057.0,765.0,0.0,0.0,0.0,2133.0,0.0,357.0,118.0,805.0,NNNNNNNN,AAAAAAAAAA,DNA,T8,large int,2016.0,gut microbiome
+T8.pv,0.0,54.0,0.0,0.0,0.0,0.0,0.0,0.0,16222.0,11166.0,10.0,0.0,0.0,34262.0,0.0,207796.0,21942.0,114.0,NNNNNNNN,AAAAAAAAAA,DNA,T8,proventriculus,2016.0,gut microbiome
+T8.sm,0.0,46.0,0.0,0.0,0.0,0.0,0.0,0.0,509915.0,29048.0,59.0,6.0,668.0,38959.0,0.0,18381.0,731.0,284.0,NNNNNNNN,AAAAAAAAAA,DNA,T8,small int,2016.0,gut microbiome

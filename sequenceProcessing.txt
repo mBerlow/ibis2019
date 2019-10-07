@@ -1,0 +1,146 @@
+source activate qiime2-2019.7
+
+#Import data
+qiime tools import \
+  --type 'SampleData[SequencesWithQuality]' \
+  --input-path finch-se-33-manifest.csv \
+  --output-path single-end-demux.qza \
+  --source-format SingleEndFastqManifestPhred33
+
+#Convert single-end-demux.qza to visualization file
+qiime demux summarize --i-data single-end-demux.qza --o-visualization single-end-demux.qzv
+
+#DADA2 R1 single-end denoising
+qiime dada2 denoise-single --i-demultiplexed-seqs single-end-demux.qza \
+	--o-table table \
+	--o-representative-sequences rep-seqs \
+	--p-n-threads 0 \
+	--verbose \
+	--output-dir output \
+	--p-trunc-len 0 --p-trim-left 19
+
+#visualize denoising results
+qiime metadata tabulate \
+  --m-input-file output/denoising_stats.qza \
+  --o-visualization denoising-stats.qzv
+
+#Visualize DADA2 output
+qiime feature-table summarize \
+	--i-table table.qza \
+	--o-visualization table.qzv \
+	--m-sample-metadata-file finch-metadata.txt
+
+qiime feature-table tabulate-seqs \
+	--i-data rep-seqs.qza \
+	--o-visualization rep-seqs.qzv
+
+#Align sequences and generate phylogenetic trees
+qiime alignment mafft   \
+	--i-sequences rep-seqs.qza   \
+	--o-alignment aligned-rep-seqs.qza
+
+qiime alignment mask   \
+	--i-alignment aligned-rep-seqs.qza   \
+	--o-masked-alignment masked-aligned-rep-seqs.qza
+
+qiime phylogeny fasttree   \
+	--i-alignment masked-aligned-rep-seqs.qza   \
+	--o-tree unrooted-tree.qza
+
+qiime phylogeny midpoint-root   \
+	--i-tree unrooted-tree.qza   \
+	--o-rooted-tree rooted-tree.qza
+
+  #be sure you download the most recent gg-...classifier.qza file
+#gg- classifier is GreenGenes. In this re-do (oct2019) I'm using Silva instead.
+qiime feature-classifier classify-sklearn \
+	--i-classifier silva-132-99-515-806-nb-classifier.qza \ #99%, for 515F/806R
+	--i-reads rep-seqs.qza \
+	--o-classification taxonomy.qza
+
+qiime metadata tabulate \
+	--m-input-file taxonomy.qza \
+	--o-visualization taxonomy.qzv
+
+#Filter out all mitochondrial and chloroplast and archaeal sequences
+qiime feature-table filter-features \
+	--i-table table.qza \
+	--m-metadata-file taxonomy.qza \
+	--p-where "Taxon NOT LIKE '%archaea%'" \
+	--o-filtered-table table-sans-archaea.qza
+
+qiime feature-table filter-features \
+	--i-table table-sans-archaea.qza \
+	--m-metadata-file taxonomy.qza \
+	--p-where "Taxon NOT LIKE '%Chloroplast%'" \
+	--o-filtered-table table-sans-archaea-chloroplast.qza
+
+qiime feature-table filter-features \
+	--i-table table-sans-archaea-chloroplast.qza \
+	--m-metadata-file taxonomy.qza \
+	--p-where "Taxon NOT LIKE '%mitochondria%'" \
+	--o-filtered-table table-sans-archaea-mito-chloro.qza
+
+qiime feature-table filter-features \
+	--i-table table-sans-archaea-chloroplast.qza \
+	--m-metadata-file taxonomy.qza \
+	--p-where "Taxon NOT LIKE '%Eukaryota%'" \
+	--o-filtered-table table-sans-archaea-mito-chloro-euk.qza
+
+#Assign taxonomy
+#Visualize final filtered table
+qiime feature-table summarize \
+	--i-table table-sans-archaea-mito-chloro-euk.qza \
+	--o-visualization table-sans-archaea-mito-chloro-euk.qzv \
+	--m-sample-metadata-file finch-metadata.txt
+
+#Generate taxa bar plots
+qiime taxa barplot \
+	--i-table table-sans-archaea-mito-chloro-euk.qza \
+	--i-taxonomy taxonomy.qza \
+	--m-metadata-file finch-metadata.txt \
+	--o-visualization taxa-barplots.qzv
+
+#ALPHA/BETA DIVERSITY plots
+qiime diversity core-metrics-phylogenetic \
+	--i-phylogeny rooted-tree.qza \
+	--i-table table-sans-archaea-mito-chloro.qza \
+	--m-metadata-file finch-metadata.txt \
+	--output-dir core-metrics-results \
+	--p-sampling-depth 1041 ##YOUR DEPTH##
+
+#qiime2 export .qza file
+qiime tools export \
+--input-path core-metrics-results/bray_curtis_distance_matrix.qza \
+--output-path .
+
+biom convert \
+-i averaged_class_otu_rar.txt \
+-o averaged_class_otu_rar.biom \
+--table-type="OTU table" \
+--to-json
+
+#observed otus
+qiime diversity alpha-group-significance   \
+	--i-alpha-diversity core-metrics-results/observed_otus_vector.qza   \
+	--m-metadata-file finch-metadata.txt   \
+	--o-visualization core-metrics-results/observed-otus-group-significance-rep-b.qzv
+
+	#faith's phylogenetic diversity
+qiime diversity alpha-group-significance   \
+	--i-alpha-diversity core-metrics-results/faith_pd_vector.qza   \
+	--m-metadata-file finch-metadata.txt   \
+	--o-visualization core-metrics-results/faith_pd_vector.qza-group-significance-rep-b.qzv
+
+	#evenness
+qiime diversity alpha-group-significance   \
+	--i-alpha-diversity core-metrics-results/evenness_vector.qza   \
+	--m-metadata-file finch-metadata.txt   \
+	--o-visualization core-metrics-results/evenness_vector-group-significance-rep-b.qzv
+
+#export these data
+qiime tools export --input-path shannon_vector.qza --output-path .
+qiime tools export --input-path weighted_unifrac_distance_matrix.qza --output-path ./uw-distance-matrix
+qiime tools export --input-path unweighted_unifrac_distance_matrix.qza --output-path ./w-distance-matrix
+qiime tools export --input-path unweighted_unifrac_pcoa_results.qza --output-path ./uw-pcoa
+qiime tools export --input-path weighted_unifrac_pcoa_results.qza --output-path ./w-pcoa
